@@ -1,0 +1,842 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 62.4%;
+}
+:root {
+  --blue: blue;
+  --white: white;
+  --black: black;
+  --smoke: whitesmoke;
+}
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+.intro {
+  padding: 25px 5%;
+  background-color: var(--smoke);
+  height: 100vh;
+}
+h1 {
+  font-size: 3rem;
+}
+h2 {
+  font-size: 2.8rem;
+}
+li {
+  font-size: 2rem;
+}
+.head {
+  display: flex;
+  justify-content: space-between;
+}
+.head-ul {
+  margin-top: 8px;
+}
+.head-ul li {
+  display: inline-block;
+  margin: 0 20px;
+  cursor: pointer;
+}
+button {
+  padding: 8px 15px;
+  font-size: 1.7rem;
+  border: 0;
+  background-color: var(--blue);
+  color: var(--white);
+  border-radius: 7px;
+  cursor: pointer;
+}
+.head-two {
+  margin-top: 5rem;
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+}
+.ht-left {
+  width: 44%;
+  margin-top: 15rem;
+}
+.ht-left h1 {
+  font-size: 6rem;
+}
+.ht-left p {
+  font-size: 1.6rem;
+  line-height: 2.1rem;
+  margin-top: 1.5rem;
+  width: 80%;
+}
+.ht-left button {
+  margin-top: 2rem;
+  padding: 10px 15px;
+}
+.ht-right {
+  position: relative;
+}
+.ht-right-sub1 {
+  position: absolute;
+  background-color: var(--white);
+  top: 6rem;
+  right: -15rem;
+  padding: 2rem;
+  text-align: center;
+  border: 2px dashed black;
+}
+.ht-right-sub1 p {
+  font-size: 1.6rem;
+}
+.ht-right-sub1 h3 {
+  font-size: 2rem;
+  margin-top: 1.5rem;
+}
+.ht-right-sub2 {
+  position: absolute;
+  background-color: var(--white);
+  bottom: 3rem;
+  left: -12rem;
+  padding: 1.5rem 2rem;
+  border: 2px dashed black;
+}
+.bank {
+  margin-top: 1rem;
+}
+.ht-right-sub2 p {
+  font-size: 1.2rem;
+}
+.ht-right-sub2 input {
+  height: 2.7rem;
+  width: 160px;
+  font-size: 1.2rem;
+}
+.ht-right-sub2 button {
+  width: 100%;
+  margin-top: 1rem;
+}
+.platform {
+  padding: 25px 10%;
+  margin-top: 5rem;
+}
+.platform p {
+  font-size: 3rem;
+  width: 400px;
+}
+.platform p b {
+  font-size: 3rem;
+}
+.plats {
+  display: flex;
+  margin-top: 2rem;
+  justify-content: space-between;
+}
+.plat {
+  width: 30%;
+  padding: 3rem 2.8rem 0;
+  border-radius: 0.9rem;
+}
+.plat p {
+  font-size: 1.8rem;
+  margin-top: 1rem;
+  width: 100%;
+}
+.plat img {
+  width: 20rem;
+  margin: 4rem 20%;
+}
+.one {
+  background-color: azure;
+}
+.two {
+  background-color: bisque;
+}
+.three {
+  background-color: antiquewhite;
+}
+.exchange {
+  padding: 25px 10%;
+  display: flex;
+  margin-top: 5rem;
+}
+.exchange-left {
+  width: 50%;
+  height: 50rem;
+  background-color: rgb(248, 243, 237);
+  padding: 3% 8%;
+  position: relative;
+}
+.exchange-form {
+  background-color: var(--white);
+  padding: 3rem 3rem;
+  border-radius: 0.7rem;
+}
+.exchange-form p {
+  font-size: 2rem;
+}
+.ex {
+  text-align: center;
+}
+.ex p {
+  font-size: 2.5rem;
+}
+.rate {
+  background-color: rgb(206, 245, 232);
+  color: var(--black);
+  font-size: 1.5rem;
+  margin-top: 0.7rem;
+}
+.exchange-form input {
+  width: 100%;
+  height: 4rem;
+  font-size: 1.7rem;
+  margin-top: 1rem;
+  padding-left: 1rem;
+  outline: none;
+}
+label {
+  margin-top: 0.9rem;
+  line-height: 3rem;
+}
+select {
+  font-size: 2rem;
+  padding: 1rem;
+}
+.to-fro {
+  display: flex;
+  justify-content: space-between;
+}
+i {
+  color: black;
+  font-size: 2rem;
+}
+form button {
+  width: 100%;
+  margin-top: 2rem;
+  border-radius: 0.1rem;
+}
+.success-exchange {
+  background-color: var(--white);
+  text-align: center;
+  position: absolute;
+  padding: 5% 3%;
+  top: 15rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 500px;
+  box-shadow: 20px 10px 20px rgba(0, 0, 0, 0.3);
+}
+.success-exchange p {
+  font-size: 2rem;
+}
+.success-exchange h3 {
+  font-size: 2rem;
+}
+.exchange-right {
+  margin-left: 10%;
+  width: 500px;
+  margin-top: 7rem;
+}
+.exchange-right h1 {
+  font-size: 5rem;
+}
+.exchange-right p {
+  font-size: 2rem;
+  margin-top: 1rem;
+}
+.exchange-right button {
+  margin-top: 1rem;
+}
+.to-fro img {
+  margin-top: 1rem;
+  height: 10rem;
+}
+.request {
+  padding: 25px 10%;
+  display: flex;
+  margin-top: 2rem;
+}
+.request-left {
+  width: 44%;
+  margin-top: 9rem;
+}
+.request-left h1 {
+  font-size: 5rem;
+}
+.request-left p {
+  font-size: 2rem;
+  margin-top: 1rem;
+}
+.request-left button {
+  margin-top: 1rem;
+}
+.request-right {
+  width: 50%;
+  height: 60rem;
+  background-color: rgb(248, 243, 237);
+  padding: 8% 6%;
+  position: relative;
+  margin-left: 10%;
+}
+.rr-form {
+  background-color: var(--white);
+  padding: 3rem;
+  border-radius: 0.7rem;
+}
+.rr-form input {
+  margin-top: 0;
+  outline: none;
+  position: relative;
+}
+.rr-one {
+  display: flex;
+  justify-content: space-between;
+}
+.rr-one h3 {
+  font-size: 2.5rem;
+}
+.rr-one p {
+  font-size: 1.8rem;
+}
+.rr-label {
+  line-height: 3rem;
+}
+.rr-label p {
+  font-size: 2rem;
+  margin-top: 2rem;
+}
+.rr-label input {
+  width: 100%;
+  height: 4rem;
+  font-size: 1.6rem;
+  padding-left: 1rem;
+  margin-top: 1rem;
+  outline: none;
+}
+.rr-on {
+  font-size: 2rem;
+  margin-top: 1.5rem;
+}
+.rr-op {
+  font-size: 1.5rem;
+}
+.success-pay {
+  background-color: var(--white);
+  padding: 1.5rem 1rem;
+  text-align: center;
+  width: 300px;
+  line-height: 3rem;
+  position: absolute;
+  top: 1.9rem;
+  left: 1rem;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+  border-radius: 0.8rem;
+}
+.success-pay p {
+  font-size: 1.4rem;
+}
+.success-pay h3 {
+  font-size: 2rem;
+}
+.success-req {
+  background-color: var(--white);
+  padding: 2.5rem 2rem;
+  text-align: center;
+  width: 370px;
+  line-height: 3rem;
+  position: absolute;
+  bottom: 1.9rem;
+  right: 1rem;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+  border-radius: 0.8rem;
+}
+.success-req p {
+  font-size: 1.4rem;
+}
+.success-req h3 {
+  font-size: 2rem;
+}
+.pay-pay {
+  display: flex;
+  justify-content: space-between;
+}
+.pay-pay p {
+  font-size: 2rem;
+}
+.pay-req {
+  line-height: 1.5rem;
+  text-align: left;
+  margin-top: 1rem;
+  position: relative;
+  padding: 1rem 2rem;
+}
+.pay-req::before {
+  content: "";
+  position: absolute;
+  width: 0.5rem;
+  height: 5rem;
+  background-color: aqua;
+  top: 1rem;
+  left: 0;
+  display: block;
+}
+.support {
+  padding: 25px 10%;
+  display: flex;
+}
+.mar {
+  margin-left: 0;
+  margin-right: 10%;
+  height: 55rem;
+}
+.image {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+}
+#insta {
+  margin: 0 43%;
+  margin-top: 2rem;
+}
+.testimonial {
+  padding: 25px 10%;
+  margin-top: 3rem;
+}
+.testimonial h2 {
+  font-size: 4rem;
+}
+.testimonial p {
+  font-size: 1.7rem;
+}
+.test-flex {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+}
+.test {
+  width: 30%;
+  box-shadow: 2px 5px 15px rgba(0, 0, 0, 0.3);
+  padding: 2rem;
+  border-radius: 0.7rem;
+}
+.test-img {
+  margin-top: 3rem;
+  display: flex;
+}
+.test-img img {
+  border-radius: 50%;
+}
+.user-det {
+  margin-left: 2rem;
+}
+.user-det h3 {
+  font-size: 2rem;
+}
+.footer {
+  padding: 8rem 10% 3rem;
+  margin-top: 15rem;
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--smoke);
+  position: relative;
+}
+.feet {
+  width: 30%;
+}
+.foot p {
+  font-size: 1.6rem;
+  margin-top: 1rem;
+}
+.feeter {
+  position: absolute;
+  background-color: var(--blue);
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  color: var(--white);
+  padding: 3rem 4rem;
+  top: -5rem;
+  border-radius: 0.4rem;
+}
+.feeter p {
+  font-size: 2rem;
+  letter-spacing: 0.7rem;
+}
+.feeter button {
+  background-color: var(--white);
+  color: var(--blue);
+}
+@media screen and (max-width: 1200px) {
+  .platform,
+  .exchange,
+  .request,
+  .platform,
+  .testimonial,
+  .support,
+  .footer,
+  .feeter {
+    padding: 25px 5%;
+  }
+  .footer {
+    padding-top: 5rem;
+  }
+  .feeter {
+    top: -6rem;
+    width: 90%;
+  }
+  .feeter p {
+    letter-spacing: 0.3rem;
+  }
+  .head-two {
+    justify-content: left;
+  }
+  .ht-left h1 {
+    font-size: 4.5rem;
+  }
+  .ht-right {
+    margin-left: 13%;
+  }
+  .ht-right-sub1 {
+    right: -10rem;
+  }
+  .ht-right-sub2 {
+    left: -8rem;
+  }
+  .exchange-left {
+    padding: 3% 4%;
+  }
+  .exchange-right {
+    width: 45%;
+    margin-left: 5%;
+  }
+  .exchange-right h1 {
+    font-size: 4.5rem;
+  }
+  .request-left h1 {
+    font-size: 4.5rem;
+  }
+  .request-right {
+    margin-left: 0.5rem;
+    width: 56%;
+    padding: 8% 4%;
+  }
+  .success-pay {
+    top: -7rem;
+    left: -8rem;
+  }
+  .mar {
+    margin-right: 5%;
+    height: 50rem;
+    margin-left: 0;
+  }
+  .sup {
+    width: 50%;
+    margin-left: 0;
+  }
+  .plat img {
+    margin: 4rem 12%;
+    width: 120px;
+  }
+}
+@media screen and (max-width: 900px) {
+  .platform,
+  .exchange,
+  .request,
+  .platform,
+  .testimonial,
+  .support,
+  .footer,
+  .feeter {
+    padding: 25px 1%;
+  }
+  .head-ul li {
+    margin: 0 10px;
+  }
+  .intro {
+    padding: 25px 0.2rem;
+  }
+  .ht-right-sub1 {
+    top: 6rem;
+    right: -5rem;
+    padding: 1rem;
+    text-align: center;
+    border: 2px dashed black;
+  }
+  .ht-left {
+    margin-top: 9rem;
+  }
+  .ht-left h1 {
+    font-size: 4rem;
+  }
+  .plat {
+    padding: 3rem 1rem 0;
+    width: 32%;
+  }
+  .exchange-left {
+    height: 42rem;
+    padding: 3rem 2%;
+  }
+  .exchange-right h1 {
+    font-size: 3rem;
+  }
+  .exchange-right p {
+    font-size: 1.6rem;
+  }
+  .exchange-right button {
+    margin-top: 2rem;
+  }
+  .request-left {
+    margin-top: 15rem;
+  }
+  .request-left h1 {
+    font-size: 3rem;
+  }
+  .request-left p {
+    font-size: 1.6rem;
+  }
+  .request-left button {
+    margin-top: 2rem;
+  }
+  .image img {
+    width: 60px;
+  }
+  #insta {
+    margin: 0 43%;
+    margin-top: 2rem;
+    width: 60px;
+  }
+  .mar {
+    height: 40rem;
+  }
+  .sup {
+    margin-top: 6rem;
+  }
+  .test {
+    width: 32%;
+    padding: 3rem 1rem;
+  }
+  .user-det h3 {
+    font-size: 1.5rem;
+  }
+  .footer {
+    padding-top: 8rem;
+  }
+  .feeter {
+    width: 95%;
+  }
+  .feeter p {
+    font-size: 1.8rem;
+    letter-spacing: 0.2rem;
+  }
+  .feeter button {
+    width: 200px;
+  }
+}
+@media screen and (max-width: 720px) {
+  .intro {
+    position: relative;
+  }
+  #head-but {
+    display: none;
+  }
+  .ham {
+    cursor: pointer;
+    display: block;
+    z-index: 2;
+  }
+  .ham span {
+    background-color: black;
+    width: 4.8rem;
+    height: 0.8rem;
+    margin: 0.7rem 0;
+    border-radius: 0.4rem;
+    display: block;
+  }
+  .head-ul {
+    position: absolute;
+    left: 50%;
+    top: -1rem;
+    transform: translateX(-50%);
+    background-color: azure;
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+    display: none;
+    z-index: 1;
+    padding-top: 40%;
+    transition: all 0.3s ease;
+  }
+  .show {
+    display: block;
+  }
+  .head-ul li {
+    display: block;
+    margin: 4rem 0;
+    font-weight: 600;
+  }
+  .head-two {
+    display: block;
+    width: 100%;
+  }
+  .ht-left {
+    width: 80%;
+    margin: 10rem 10% 0;
+    text-align: center;
+  }
+  .ht-left p {
+    width: 100%;
+  }
+  .ht-right {
+    width: 70%;
+    margin: 0;
+    margin-top: 5rem;
+  }
+  .ht-right img {
+    margin-left: 5rem;
+  }
+  .ht-right-sub1 {
+    right: 10rem;
+    display: none;
+  }
+  .ht-right-sub2 {
+    left: -3rem;
+    display: none;
+  }
+  .platform {
+    margin: 0 3%;
+    margin-top: 34rem;
+  }
+  .platform p {
+    width: 100%;
+  }
+  .plats {
+    flex-wrap: wrap;
+    width: 80%;
+    margin: 2rem 10%;
+  }
+  .plat {
+    width: 100%;
+    margin-top: 2rem;
+    padding: 5rem 3rem 0;
+  }
+  .plat img {
+    margin-left: 30%;
+  }
+  #send {
+    width: 290px;
+    height: 200px;
+    margin-left: 0;
+  }
+  #pay {
+    width: 200px;
+    height: 180px;
+    margin-left: 10%;
+  }
+  .exchange {
+    flex-direction: column-reverse;
+    margin-top: 0;
+  }
+  .exchange-right {
+    margin-top: 0;
+    width: 100%;
+    text-align: center;
+    margin-left: 0;
+  }
+  .exchange-right p {
+    width: 100%;
+  }
+  .exchange-left {
+    width: 90%;
+    margin: 2rem 5%;
+    padding: 3rem 3%;
+  }
+  .exchange-form {
+    padding: 3rem 1rem;
+  }
+  #inter {
+    width: 50px;
+  }
+  .request {
+    display: block;
+    margin-top: 0;
+    width: 90%;
+    margin: 1rem 5%;
+  }
+  .request-left {
+    margin-top: 0;
+    width: 100%;
+    text-align: center;
+  }
+  .request-right {
+    width: 100%;
+    margin-top: 7rem;
+    height: 50rem;
+    margin-left: 0;
+  }
+  .success-pay {
+    left: 1rem;
+    top: -4rem;
+    padding: 0.9rem 0rem;
+    line-height: 1.6rem;
+  }
+  .success-pay p {
+    font-size: 1.3rem;
+  }
+  .success-req {
+    bottom: -7rem;
+  }
+  .support {
+    flex-direction: column-reverse;
+    margin-top: 5rem;
+    width: 100%;
+  }
+  .mar {
+    width: 60%;
+    margin: 3rem 20%;
+    height: 27rem;
+    padding: 0;
+  }
+  .testimonial {
+    margin-top: 0;
+    width: 90%;
+    margin: 0 5%;
+    text-align: center;
+  }
+  .test-flex {
+    flex-wrap: wrap;
+    text-align: left;
+  }
+  .test {
+    width: 80%;
+    margin-top: 1.8rem;
+    margin: 1.8rem 10% 0;
+    padding: 2rem;
+  }
+  .footer {
+    display: block;
+    padding: 7% 10%;
+  }
+  .feeter {
+    width: 94%;
+    left: 1.2rem;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+  }
+  .feeter p {
+    display: none;
+  }
+  .feet {
+    width: 100%;
+  }
+  .foot {
+    margin-top: 1rem;
+  }
+}
